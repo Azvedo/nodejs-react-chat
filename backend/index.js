@@ -10,11 +10,11 @@ app.use(express.json());
 app.use(cors({ origin: true }));
 
 app.post("/singup", async (req, res) => {
-  const { username, secret, first_name, email } = req.body;
+  const { username, secret, first_name, last_name } = req.body;
   try {
     const r = await axios.post( //esse request me retorna um objeto com o username e o secret
       "https://api.chatengine.io/users/",
-      { username: username, secret: secret, first_name: first_name, email: email },
+      { username: username, secret: secret, first_name: first_name, last_name: last_name },
       { headers: { "Private-Key": process.env.NODEJS_CHAT_ENGINE_API_KEY } }
     )
     return res.status(r.status).json(r.data);  // retorno o status do request e os dados

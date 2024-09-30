@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import axios from "axios";
-import "./App.css";
+import "./authpage.css";
 
 const AuthPage = (props) => {
   const [username, setUsername] = useState();
@@ -17,6 +17,12 @@ const AuthPage = (props) => {
 
   return (
     <div className="login-page">
+      <div className="Title">
+      <img src="https://user-images.githubusercontent.com/62365628/226145294-5df03576-8fad-4819-a29f-f0e57c02a803.png" alt="" />
+        <h1> 
+        Welcome to the new chat app< br/>on the web
+        </h1>
+      </div>
       <div className="card">
         {/* Login Form */}
         <form onSubmit={onLogin}>
@@ -35,6 +41,11 @@ const AuthPage = (props) => {
           />
           <button type="submit">LOG IN</button>
         </form>
+        <p>
+          <a href=""> 
+            Sing up
+          </a>
+        </p>
       </div>
     </div>
   );
