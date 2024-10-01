@@ -10,6 +10,7 @@ const AuthPage = (props) => {
   const [isModalVisible, setisModalVisible] = useState(false);
 
   const toggleModal = () => {
+    console.log("Modal visibility: ", !isModalVisible);
     setisModalVisible(!isModalVisible);
   };
 
@@ -31,6 +32,7 @@ const AuthPage = (props) => {
   };
 
   return (
+    <div>
     <div className="login-page">
       <div className="Title">
       <img src="https://user-images.githubusercontent.com/62365628/226145294-5df03576-8fad-4819-a29f-f0e57c02a803.png" alt="" />
@@ -62,8 +64,9 @@ const AuthPage = (props) => {
           </form>
         </div>
       </div>
-      {isModalVisible && (
-        <SingupModal toggleModal={toggleModal} />)}
+    </div>
+    {isModalVisible && (
+      <SingupModal toggleModal={toggleModal} />)}
     </div>
   );
 };

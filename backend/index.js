@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: true }));
 
-app.post("/singup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   const { username, secret, first_name, last_name } = req.body;
   try {
     const r = await axios.post( //esse request me retorna um objeto com o username e o secret
