@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AuthPage from './components/loginpage';
+import AuthPage from './components/Login/loginpage';
 import ChatsPage from "./components/chatspage";
 import "./App.css";
 

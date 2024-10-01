@@ -1,10 +1,11 @@
 .login-page {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: rgb(37, 31, 98);
+  z-index: 1;
 }
 
 .Title{
@@ -15,25 +16,39 @@
   flex-direction: column;
   align-items: center;
   gap: 45px;
+  position: absolute;
+  left: 60px;
 
   & img{
     width: 200px;
   }
 }
 
+.form-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 600px;
+  background-color: rgb(30, 24, 87);
+  position: absolute;
+  right: 0;
+}
+
 .card {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   position: relative;
   text-align: center;
-  border: solid 0.5px #e6f7ff;
+  /* border: solid 0.5px #e6f7ff; */
   border-radius: 8px;
   padding: 16px;
 }
 
 .title {
   padding-top: 32px;
-  font-size: 22px;
+  font-size: 30px;
   color: white;
   font-weight: 700;
 }
@@ -57,9 +72,20 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+
+}
+
+.singup-button{
+  background-color: #002df5;
+  color: white;
 }
 
 button:hover {
   background-color: rgba(156, 148, 148, 0.4);
   color: #ffffff;
+}
+
+.blur-background{
+  filter: blur(5px);
+  transition: filter 0.5s ease;
 }
